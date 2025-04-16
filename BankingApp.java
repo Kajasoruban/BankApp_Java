@@ -28,6 +28,36 @@ class BankAccount{
         System.out.print("\n\nYour bank account has been created\nYour account number is "+AccountNumber+"\nYour pin number is "+pin+"\nuse this pin number to access your account\n\n\n");
     }
 
+    public void checkBalance(){
+        System.out.println("\n\nYour Account Balance  : "+balance+"\n\n");
+    }
+
+    public void deposit(double amount){
+        if(amount>0){
+        balance += amount;
+        System.out.println("\n\ndeposited amount : "+amount);
+        }else{
+            System.out.println("Invalid");
+        }
+    }
+
+    
+    public void withdraw(double amount){
+        if(amount>0){
+
+        if(balance-amount > 0){
+
+        balance -= amount;
+        System.out.println("\n\nwithdrawed amount : "+amount);
+        }else{
+            System.out.println("\n\nYou don't have enough balance\n\n");
+        }
+
+        }else{
+            System.out.println("Invalid");
+        }
+    }
+
     public void openMenu(){
 
         System.out.println("Wel come! "+ this.userName+"\n");
@@ -41,23 +71,43 @@ class BankAccount{
             switch (option) {
                 case 'A':{
 
-
+                
+                checkBalance();
+                 System.out.print("\nPress Enter to continue...");
+                     scanner.nextLine();
+                     scanner.nextLine();
 
                 }break;
                 case 'B':{
-                
+                System.out.print("Enter the amount to withdraw :");
+                withdraw(scanner.nextDouble());
+                 System.out.print("\nPress Enter to continue...");
+                     scanner.nextLine();
+                     scanner.nextLine();
 
                 }break;
                 case 'C':{
-                
+
+                System.out.print("Enter the amount to deposit :");
+                deposit(scanner.nextDouble());
+                 System.out.print("\nPress Enter to continue...");
+                     scanner.nextLine();
+                     scanner.nextLine();
 
                 }break;
                 case 'E':{
-                
+
+                logOut();
+                System.out.println("\nExited...\n");
+
                 }break;
                 default:
                     System.out.println("\n\nInvalid option\n\n");
             }
+
+            // System.out.print("Press Enter to continue...");
+            // scanner.nextLine();
+            // scanner.nextLine();
             
         } while (option!='E');
 
@@ -106,6 +156,9 @@ public class BankingApp{
 
                     bankAccount=new BankAccount();
 
+                     System.out.print("\nPress Enter to continue...");
+                     scanner.nextLine();
+                     scanner.nextLine();
 
 
 
@@ -132,6 +185,11 @@ public class BankingApp{
                 default:
                     System.out.println("\n\nInvalid option\n\n");
             }
+
+            // System.out.print("Press Enter to continue...");
+            // scanner.nextLine();
+            // scanner.nextLine();
+            // System.out.println("continue...");
             
         } while (option!='E');
 
