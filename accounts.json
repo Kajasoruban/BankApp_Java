@@ -1,17 +1,17 @@
 {
   "storedAccounts" : [ {
     "userName" : "kajan",
-    "nic" : 20321302,
-    "accountNumber" : 3049083,
-    "pin" : 2289,
-    "balance" : 0.0,
-    "login" : false
+    "nic" : 204233523,
+    "accountNumber" : 54577128,
+    "pin" : 7262,
+    "balance" : 10050.0,
+    "login" : true
   }, {
     "userName" : "luffy",
-    "nic" : 1232422,
-    "accountNumber" : 14122959,
-    "pin" : 780,
-    "balance" : 0.0,
+    "nic" : 4523523,
+    "accountNumber" : 32455892,
+    "pin" : 5836,
+    "balance" : 1000.0,
     "login" : false
   } ]
 }
